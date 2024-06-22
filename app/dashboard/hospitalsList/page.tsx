@@ -1,18 +1,18 @@
-import { AppointmentCard } from "@/components/cards/Appointments";
+import { HospitalCard } from "@/components/cards/HospitalCard";
 import { CustomContainer } from "@/components/CustomContainer";
 import { Heading } from "@/components/Heading";
 
-const AppointmentPage = () => {
+const HospitalListPage = () => {
   return (
     <>
       <Heading as="h1" className="text-primary mb-6">
-        Appointments
+        List of Hospitals
       </Heading>
       <CustomContainer>
-        <AppointmentCard />
+        <HospitalCard />
       </CustomContainer>
     </>
   );
 };
 
-export default AppointmentPage;
+export default HospitalListPage;
