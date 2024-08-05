@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./floatButton.css";
-import { Link } from "react-router-dom";
+import { AppointmentContext } from "../../Context";
 
 const FloatButton = () => {
+  const context = useContext(AppointmentContext);
+  const newAppointment = () => {
+    context.openNewAppointment();
+  };
+
   return (
     <>
-      <Link to="/newAppointment">
-        <div
-          id="floating-button"
-          data-toggle="tooltip"
-          data-placement="left"
-          data-original-title="Create"
-        >
-          <p className="plus">+</p>
-        </div>
-      </Link>
+      <div
+        id="floating-button"
+        data-toggle="modal"
+        data-target="#myModal"
+        onClick={() => newAppointment()}
+      >
+        <p className="plus">+</p>
+      </div>
     </>
   );
 };

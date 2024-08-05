@@ -3,25 +3,27 @@
 /* checkout form styling */
 
 .formBox {
-  height: content;
-  width: max-content;
+  width: auto;
   padding: 1.5em 2.5em;
+  display: grid;
 }
 
 .formTitle {
   font-size: 1.6em;
   padding-bottom: 6px;
   margin-bottom: 15px;
-  border-bottom: 1.5px solid #E8E8E8;
+  display: flex;
+  justify-content: center;
 }
 
 .formHeader {
   font-size: 16px;
   margin-bottom: 2px;
+  width: fit-content;
 }
 
 .formInput {
-  width: 70%;
+  width: 90%;
   height: 30px;
   font-size: 16px;
   padding-left: 6px;
@@ -29,27 +31,5 @@
   border-left: 1px solid #E8E8E8;
   border-right: 1px solid #E8E8E8;
   border-bottom: 1px solid #E8E8E8;
-}
-
-.formInput:not(:last-child) {
-  margin-bottom: 15px;
-}
-
-input[type=submit] {
-  display: block;
-  -webkit-appearance: button;
-  font-size: 15px;
-  width: 135px;
-  height: 36px;
-  margin-left: 254px;
-  background-color: #E18988;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 3px;
-}
-
-/* Forces .form-input styles onto search type */
-input[type=search] {
-  -webkit-appearance: textfield;
-  box-sizing: content-box;
+  justify-self: center;
 }

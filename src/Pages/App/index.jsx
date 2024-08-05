@@ -4,6 +4,7 @@ import { HospitalCard } from "../../Components/HospitalCard";
 import { Navbar } from "../../Components/Navbar";
 import { Appointments } from "../Appointments";
 import { NewAppointment } from "../NewAppointment";
+import { AppointmentProvider } from "../../Context";
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -23,10 +24,12 @@ const AppRoutes = () => {
 const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-        <AppRoutes />
-      </BrowserRouter>
+      <AppointmentProvider>
+        <BrowserRouter>
+          <Navbar />
+          <AppRoutes />
+        </BrowserRouter>
+      </AppointmentProvider>
     </>
   );
 };
